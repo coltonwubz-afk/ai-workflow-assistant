@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"\nimport ast, sys\n\nfiles = ['prompts.py', 'utils.py', 'processor.py', 'app.py']\nfor f in files:\n    try:\n        with open\\(f\\) as fh:\n            ast.parse\\(fh.read\\(\\)\\)\n        print\\(f'  OK  {f}'\\)\n    except SyntaxError as e:\n        print\\(f'  ERR {f}: {e}'\\)\n        sys.exit\\(1\\)\nprint\\('All files parse cleanly.'\\)\n\")",
+      "Bash(python3 -c \"\nimport ast, sys\n\nfiles = ['prompts.py', 'utils.py', 'processor.py', 'app.py']\nfor f in files:\n    try:\n        with open\\(f\\) as fh:\n            ast.parse\\(fh.read\\(\\)\\)\n        print\\(f'  OK  {f}'\\)\n    except SyntaxError as e:\n        print\\(f'  ERR {f}: {e}'\\)\n        sys.exit\\(1\\)\nprint\\('All files parse cleanly.'\\)\n\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('app.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(pip install -r requirements.txt -q 2>&1 | tail -5)",
+      "Bash(pip3 install -r requirements.txt -q 2>&1 | tail -5)",
+      "Bash(streamlit run app.py)"
+    ]
+  }
+}
