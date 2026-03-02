@@ -14,8 +14,6 @@ Paste raw unstructured text — a support ticket, meeting notes, or an error log
 
 ![AI Workflow Assistant screenshot](docs/screenshot.png)
 
-> _To add a screenshot: take a screenshot of the running app, save it as `docs/screenshot.png`, and commit it._
-
 ---
 
 ## Features
