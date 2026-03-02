@@ -1,14 +1,20 @@
 # AI Workflow Assistant
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://ai-workflow-assistant-cs.streamlit.app)
+
+**[→ Try the live demo](https://ai-workflow-assistant-cs.streamlit.app)**
+
 A portfolio project demonstrating AI automation engineering skills using the **Anthropic Claude API** and **Streamlit**.
 
 Paste raw unstructured text — a support ticket, meeting notes, or an error log — and get back a clean, structured report with a summary, action items, category, and priority level. The report is viewable in the UI and downloadable as Markdown.
 
 ---
 
-## Demo
+## Screenshot
 
-![screenshot placeholder](docs/screenshot.png)
+![AI Workflow Assistant screenshot](docs/screenshot.png)
+
+> _To add a screenshot: take a screenshot of the running app, save it as `docs/screenshot.png`, and commit it._
 
 ---
 
@@ -57,28 +63,48 @@ The two-step design produces better results than a single prompt because Claude 
 
 ---
 
-## Setup
+## Running locally
 
-### 1. Clone and install
+### Prerequisites
+
+- Python 3.9+
+- An [Anthropic API key](https://console.anthropic.com/) (free tier works)
+
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/yourname/ai-workflow-assistant.git
 cd ai-workflow-assistant
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
 python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configure your API key
+### 4. Add your API key
 
 ```bash
 cp .env.example .env
-# Edit .env and set ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-You can also enter the key directly in the sidebar at runtime (useful for demos).
+Open `.env` and set your key:
 
-### 3. Run
+```
+ANTHROPIC_API_KEY=sk-ant-your-key-here
+```
+
+> **Tip:** You can also skip the `.env` file entirely and paste your API key directly into the sidebar when the app loads. This is handy for quick demos.
+
+### 5. Run the app
 
 ```bash
 streamlit run app.py
@@ -90,12 +116,12 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ## Usage
 
-1. Select an input type from the dropdown
-2. Paste your raw text into the input panel
+1. Select an input type from the dropdown (**Support Ticket**, **Meeting Notes**, or **Error Log**)
+2. Paste your raw text, or click **Load example** to pre-fill a sample
 3. Click **Analyze**
 4. View the structured results in the output panel
-5. Optionally enable **Show step-1 analysis** to see Claude's reasoning
-6. Click **Download report as Markdown** to save the report
+5. Optionally enable **Show step-1 analysis** to see Claude's intermediate reasoning
+6. Click **Download report as Markdown** to save the full report
 
 ---
 
