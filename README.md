@@ -71,7 +71,7 @@ The two-step design produces better results than a single prompt because Claude 
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourname/ai-workflow-assistant.git
+git clone https://github.com/coltonshelnutt/ai-workflow-assistant.git
 cd ai-workflow-assistant
 ```
 
